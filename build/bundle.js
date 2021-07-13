@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log(1)})();
+(()=>{"use strict";(()=>{const e=document.querySelector(".header-modal--opened"),s=document.querySelector(".overlay");var a,o,d;a=document,o="click",d=a=>{const o=a.target;o.closest(".btn-warning")?(s.classList.remove("overlay-close"),e.classList.remove("header-modal")):o.closest(".header-modal--opened")&&!o.matches(".header-modal__close")||(s.classList.add("overlay-close"),e.classList.add("header-modal"))},a.addEventListener(o,d)})()})();
