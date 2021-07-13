@@ -11,7 +11,7 @@ import calc from "./modules/calc";
 toggleModal();
 slider();
 serviceModal();
-timer();
+timer('10 august 2021 01:10');
 forms();
 certificate();
 scroll();
