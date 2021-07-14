@@ -34,7 +34,6 @@ const slider = () => {
 
         init() {
             // this.addItemClass();
-            console.log(this.slide);
             this.controlSlider();
             this.loadMobileSlider();
 
@@ -55,7 +54,6 @@ const slider = () => {
 
         prevSlider(view,width) {
             if (this.options.infinity||this.options.position > 0) {
-                console.log(this.options.position)
                 --this.options.position;
                 if(this.options.position<0){
                   this.options.position =  this.slide.length - view
@@ -67,7 +65,6 @@ const slider = () => {
         nextSlider(view,width) {
             if (this.options.infinity||this.options.position < this.slide.length - view) {
                 ++this.options.position;
-                console.log(this.options.position);
                 if(this.options.position > this.slide.length-view){
                     this.options.position = 0
                 }
@@ -78,10 +75,8 @@ const slider = () => {
         controlSlider() {
             handler(this.prev, 'click',()=>{
                 if (html.clientWidth<576){
-                    console.log('<')
                     this.prevSlider(this.slidesToShowMobile, this.options.widthSlideMobile);
                 }else{
-                    console.log('>')
                     this.prevSlider(this.slidesToShow, this.options.widthSlide);
                 }
             } )
