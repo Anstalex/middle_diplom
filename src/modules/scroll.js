@@ -3,8 +3,14 @@ import handler from "./handler";
 const scroll = () => {
     const btnScroll = document.querySelector('.smooth-scroll');
     const initialSection = document.getElementById('offer');
-    handler(window,'scroll',()=>{
-        console.log(window.clientWidth)
+    const secondSection = document.getElementById('benefits');
+    handler(document, 'scroll', () => {
+        const topSection = secondSection.getBoundingClientRect().top;
+        if (topSection < 0) {
+            btnScroll.classList.remove('hide');
+        }else{
+            btnScroll.classList.add('hide');
+        }
     })
 
     handler(btnScroll, 'click', () => {
