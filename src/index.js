@@ -7,6 +7,7 @@ import forms from "./modules/forms";
 import certificate from "./modules/certificate";
 import scroll from "./modules/scroll";
 import calc from "./modules/calc";
+import maskPhone from "./modules/maskPhone";
 
 toggleModal();
 slider();
@@ -16,3 +17,4 @@ forms();
 certificate();
 scroll();
 calc();
+maskPhone('input[name=phone]');

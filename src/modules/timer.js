@@ -1,9 +1,14 @@
 let countTimer;
-const timer = (deadline) => {
-    const timerDays = document.querySelector('.count_1');
-    const timerHours = document.querySelector('.count_2');
-    const timerMinutes = document.querySelector('.count_3');
-    const timerSeconds = document.querySelector('.count_4');
+const timer = deadline => {
+    const handlerForEach = (array, method) => {
+        array.forEach(item => {
+            item.children[1].textContent = method;
+        });
+    };
+    const timerDays = document.querySelectorAll('.count_1');
+    const timerHours = document.querySelectorAll('.count_2');
+    const timerMinutes = document.querySelectorAll('.count_3');
+    const timerSeconds = document.querySelectorAll('.count_4');
     const news = {};
 
     function getTimeRemaining() {
@@ -30,10 +35,10 @@ const timer = (deadline) => {
                 return +item;
             }
         };
-        timerDays.children[1].textContent = addNull(news.days);
-        timerHours.children[1].textContent = addNull(news.hours);
-        timerMinutes.children[1].textContent = addNull(news.minutes);
-        timerSeconds.children[1].textContent = addNull(news.seconds);
+        handlerForEach(timerDays, addNull(news.days));
+        handlerForEach(timerHours, addNull(news.hours));
+        handlerForEach(timerMinutes, addNull(news.minutes));
+        handlerForEach(timerSeconds, addNull(news.seconds));
     }
 
     updateClock();
