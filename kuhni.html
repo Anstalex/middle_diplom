@@ -1099,7 +1099,7 @@
             </div>
             <div class="form-action">
                 <div class="text-center">
-                    <button type="submit" class="btn btn-warning  feedback">
+                    <button type="submit" class="btn btn-warning btn-submit feedback">
                         Свяжитесь со мной!
                     </button>
                 </div>
@@ -1108,8 +1108,8 @@
         </form>
         <span class="help-block"
         >Гарантируем 100% конфиденциальность. Ваша информация не будет
-          распространяться.</span
-        >
+          распространяться.</span>
+
     </div>
 </div>
 
@@ -1147,7 +1147,7 @@
             </div>
             <div class="form-action">
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success btn-success-submit feedback">
+                    <button type="submit" class="btn btn-success btn-submit feedback">
                         Принять участие!
                     </button>
                 </div>
@@ -1156,8 +1156,9 @@
         </form>
         <span class="help-block"
         >Гарантируем 100% конфиденциальность. Ваша информация не будет
-          распространяться.</span
-        >
+          распространяться.</span>
+        <span title="Close" class="header-modal__close">x</span>
+
     </div>
 </div>
 
@@ -1192,7 +1193,7 @@
             </div>
             <div class="form-action">
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success btn-success-submit feedback">
+                    <button type="submit" class="btn btn-success btn-submit feedback">
                         Вызвать замерщика!
                     </button>
                 </div>
@@ -1202,8 +1203,8 @@
         </form>
         <span class="help-block"
         >Гарантируем 100% конфиденциальность. Ваша информация не будет
-          распространяться.</span
-        >
+          распространяться.</span>
+
     </div>
 </div>
 
@@ -1212,15 +1213,16 @@
         <h2>Статус отправки формы:</h2>
     </div>
     <div class="box-modal_body">
+        <div id="modal-message"></div>
         <div class="modal-content"></div>
         <br/><br/>
-        <a href="#" class="btn btn-success btn-success-submit fancyClose">ok</a>
+        <a href="#" class="btn btn-success btn-close fancyClose">ok</a>
     </div>
 </div>
 
 <div class="overlay overlay-close"></div>
 
-<div class="header-modal header-modal--opened">
+<div class="header-modal hide header-modal--opened">
     <div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
         <div class="fancybox-outer">
             <div class="fancybox-inner" style="overflow: hidden; width: 580px; height: 495px;">
@@ -1242,7 +1244,7 @@
                             </div>
                             <div class="form-action">
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-warning  feedback">Свяжитесь со мной!</button>
+                                    <button type="submit" class="btn btn-warning btn-submit  feedback">Свяжитесь со мной!</button>
                                 </div>
                             </div>
                             <input type="hidden" name="page" value="Окна">
@@ -1255,7 +1257,7 @@
         <span title="Close" class="header-modal__close">x</span></div>
 </div>
 
-<div class="services-modal services-modal--opened">
+<div class="services-modal hide services-modal--opened">
     <div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
         <div class="fancybox-outer">
             <div class="fancybox-inner" style="overflow: hidden; width: 580px; height: 495px;">
@@ -1277,7 +1279,9 @@
                             </div>
                             <div class="form-action">
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success btn-success-submit feedback">Вызвать замерщика!</button>
+                                    <button type="submit" class="btn btn-success btn-submit feedback">Вызвать
+                                        замерщика!
+                                    </button>
                                 </div>
                             </div>
                             <input type="hidden" name="page" value="Окна">

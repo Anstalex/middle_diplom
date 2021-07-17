@@ -1,4 +1,4 @@
-function maskPhone(selector, masked = '8 (___) ___-__-__') {
+function maskPhone(selector, masked = '+7 (___) ___-__-__') {
     const elems = document.querySelectorAll(selector);
     function mask(event) {
         const keyCode = event.keyCode;

@@ -1562,13 +1562,6 @@ input.error {
 .potolki .order {
   background: url(../images/order5-bg.jpg) no-repeat center;
 }
-.header-modal {
-  display: none;
-}
-
-.services-modal {
-  display: none;
-}
 
 .services-modal--opened {
   position: fixed;
@@ -1590,7 +1583,6 @@ input.error {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 9999;
 }
 
 .header-modal__close {
