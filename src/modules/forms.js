@@ -1,21 +1,21 @@
 import handler from "./handler";
 import { jsonCalc } from './calc';
+import { modal } from './modal';
+
+export const isValidTest = (inputs, callback) => {
+    if ([...inputs].every(item => item.value !== '')) {
+        callback();
+    }
+};
 
 const forms = () => {
     const box = document.querySelectorAll('input[type=text]');
     const allInput = document.querySelectorAll('input');
     const btnSubmit = document.querySelectorAll('.btn-submit');
     const overlay = document.querySelector('.overlay');
-    const headerModal = document.getElementById('header-modal');
-    const serviceModal = document.getElementById('service-modal');
-    const message = document.getElementById('responseMessage');
     let formInputs;
 
-    const isValidTest = (inputs, callback) => {
-        if ([...inputs].every(item => item.value !== '')) {
-            callback();
-        }
-    };
+
 
     const sendForm = form => {
         const errorMessage = 'Что-то пошло не так';
@@ -46,36 +46,23 @@ const forms = () => {
                 body[val[0]] = val[1];
             }
             test = postData(body);
-            if ((form.name !== 'action-form') &&
-                (form.name !== 'callback-form') &&
-                (form.name !== 'application-form') &&
-                (form.name !== 'action-form2')) {
-                form.parentNode.parentNode.classList.add('hide');
-            }
-            if (form.name === 'callback-form') {
-                headerModal.classList.add('hide');
-            } else if (form.name === 'application-form') {
-                serviceModal.classList.add('hide');
-            }
+            modal && modal.classList.add('hide');
+            overlay.classList.add('overlay-close');
             test
                 .then(response => {
                     if (response.status !== 200) {
                         throw new Error('Status network not correct');
                     }
                     statusMessages.textContent = successMessage;
+                    allInput.forEach(item => {
+                        item.value = '';
+                        item.classList.remove('invalid');
+                        item.classList.remove('valid');
+                    });
                 }).catch(error => {
                     statusMessages.textContent = errorMessage;
                     console.error(error);
                 });
-
-            const iterate = () => {
-                for (const item of formInputs) {
-                    item.value = '';
-                    message.value = '';
-                }
-            };
-            iterate();
-
         };
         renderData(form);
 
@@ -160,22 +147,6 @@ const forms = () => {
 
                 isValidTest(inputs, () => {
                     sendForm(form);
-                    message.classList.remove('hide');
-                    overlay.classList.remove('overlay-close');
-                    inputs.forEach(item => {
-                        item.value = '';
-                    });
-                    // handler(document, 'click', e => {
-                    //     const target = e.target;
-                    //     if (!target.closest('#responseMessage') &&
-                    //         (!target.closest('.btn-submit')) || (target.matches('.btn-close'))) {
-                    //         message.classList.add('hide');
-                    //         overlay.classList.add('overlay-close');
-                    //
-                    //     }
-                    // });
-
-
                 });
 
 

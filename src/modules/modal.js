@@ -1,42 +1,48 @@
 import handler from "./handler";
-// import jsonCalc from "./calc";
+export let modal;
+let inputs;
 
 
 const toggleModal = () => {
-    const menu = document.querySelector('.navbar-nav');
-    const btnStart = document.querySelector('.btn-start');
-    const popup = document.querySelector('.header-modal--opened');
-    const servicePopup = document.querySelector('.services-modal--opened');
     const overlay = document.querySelector('.overlay');
-    const allBtn = document.querySelectorAll('.btn');
-    const modals = document.querySelector('.modal-all');
-    const order = document.getElementById('order');
-    const response = document.getElementById('responseMessage');
-    const certificate = document.querySelectorAll('.modal-certificate');
-    let modal;
-    const openPopup = element => {
-        modal = document.getElementById(`${element.dataset.id}`);
-        console.log(modal);
+
+    const openPopup = () => {
         modal.classList.remove('hide');
         overlay.classList.remove('overlay-close');
     };
     const closePopup = () => {
         modal.classList.add('hide');
         overlay.classList.add('overlay-close');
-        const inputsPopup =  modal.querySelectorAll('input');
-        inputsPopup.forEach(item => {
+    };
+    const cleanPopup = () => {
+        inputs = modal.querySelectorAll('input.form-control');
+        inputs.forEach(item => {
             item.value = '';
             item.classList.remove('invalid');
             item.classList.remove('valid');
         });
+
     };
+
 
     handler(document, 'click', e => {
         const target = e.target;
         if (target.closest('.btn-start')) {
-            openPopup(target);
-        } else if ((!target.closest(`#${modal.id}`)) ||
-        (target.matches('.btn-close'))) {
+            if (!target.closest('.btn-submit')) {
+                modal = document.getElementById(`${target.dataset.id}`);
+                inputs = modal.querySelectorAll('input.form-control');
+                openPopup(target);
+            } else {
+                console.log(modal, 1312321);
+                inputs = modal?.querySelectorAll('input.form-control') ?? [];
+                if (inputs.length && [...inputs].every(item => item.value !== '')) {
+                    modal = document.getElementById(`${target.dataset.id}`);
+                    openPopup(target);
+                }
+            }
+        } else if ((target.matches(`.overlay`)) ||
+            (target.matches('.btn-close'))) {
+            cleanPopup();
             closePopup();
         }
     });
