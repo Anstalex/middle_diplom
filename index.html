@@ -65,7 +65,7 @@
 	      				<a href="tel:89876543210">+7 (987) <strong>654-32-10</strong></a>
 	      			</div>
 	      			<div class="top-btn pull-left">
-	      				<a href="#callback" class="btn btn-warning btn-submit btn-md fancyboxModal">Заказать звонок!</a>
+	      				<a href="#callback" data-id="responseMessage"  class="btn btn-warning btn-submit btn-start btn-md fancyboxModal">Заказать звонок!</a>
 	      			</div>
 	      		</div>
           	</div>
@@ -88,7 +88,7 @@
 							<div class="phone"><a href="tel:89876543210">+7 (987) <span class="text-normal">654-32-10</span></a></div>
 						</div>
 						<div class="col-sm-12 col-lg-6">
-							<div class="button"><a href="#callback" class="btn btn-warning  btn-start btn-block fancyboxModal"><i class="phone-icon"></i> Заказать звонок!</a></div>
+							<div class="button"><a href="#callback" data-id="header-modal" class="btn btn-warning  btn-start btn-block fancyboxModal"><i class="phone-icon"></i> Заказать звонок!</a></div>
 						</div>
 					</div>
 				</div>	
@@ -125,7 +125,7 @@
     				<div class="utp-inner">
     					<div class="utp-heading"><strong>До 11 июля</strong> проводится программа «Профремонт»</div>
     					<div class="utp-subheading">Рассрочка <span class="text-normal">без банка</span> и <span class="text-normal">скидки до 40%</span> для Вас!</div>
-    					<div class="utp-button"><a href="#order" class="btn btn-success btn-open-modal btn-lg fancyboxModal">Узнать свою скидку</a></div>
+    					<div class="utp-button"><a href="#order"  class="btn btn-success btn-start btn-lg fancyboxModal" data-id="order">Узнать свою скидку</a></div>
     				</div>
     			</div>
     		</div>
@@ -195,7 +195,7 @@
 	    					<p>Доступные окна высокого качества.</p>
 	    					<p><strong>От 3 200 руб./м<sup>2</sup></strong></p>
 	    					<p class="services-image_mobile visible-xs-block"><a href="images/services/original/standart/1.jpg" data-fancybox-group="fancybox-thumb-1" class="fancybox-thumb"><span>Смотреть работы</span></a></p>
-	    					<div class="service-button"><a href="#application" data-subject="Стандартные ПВХ-окна" class="btn btn-success btn-start-success btn-sm fancyboxModal">Вызвать замерщика</a></div>
+	    					<div class="service-button"><a href="#application" data-id="service-modal" data-subject="Стандартные ПВХ-окна" class="btn btn-success btn-start btn-sm fancyboxModal">Вызвать замерщика</a></div>
 	    				</div>
 	    			</div>
 	    		</div>
@@ -209,7 +209,7 @@
 	    					<p>Европейское качество, по ценам ниже рыночных.</p>
 	    					<p><strong>От 6 200 руб./м<sup>2</sup></strong></p>
 	    					<p class="services-image_mobile visible-xs-block"><a href="images/services/original/premium/1.jpg" data-fancybox-group="fancybox-thumb-2" class="fancybox-thumb"><span>Смотреть работы</span></a></p>
-	    					<div class="service-button"><a href="#application" data-subject="Пвх-окна премиум класса" class="btn btn-success btn-start-success btn-sm fancyboxModal">Вызвать замерщика</a></div>
+	    					<div class="service-button"><a href="#application" data-subject="Пвх-окна премиум класса"  data-id="service-modal"  class="btn btn-success btn-start btn-sm fancyboxModal">Вызвать замерщика</a></div>
 	    				</div>
 	    			</div>
 	    		</div>
@@ -223,7 +223,7 @@
 	    					<p>Алюминиевые и пластиковые перегородки заводского качества.</p>
 	    					<p><strong>От 8 350 руб./м<sup>2</sup></strong></p>
 	    					<p class="services-image_mobile visible-xs-block"><a href="images/services/original/septa/1.jpg" data-fancybox-group="fancybox-thumb-3" class="fancybox-thumb"><span>Смотреть работы</span></a></p>
-	    					<div class="service-button"><a href="#application" data-subject="Входные группы-перегородки" class="btn btn-success btn-start-success btn-sm fancyboxModal">Вызвать замерщика</a></div>
+	    					<div class="service-button"><a href="#application" data-subject="Входные группы-перегородки"  data-id="service-modal"  class="btn btn-success btn-start btn-sm fancyboxModal">Вызвать замерщика</a></div>
 	    				</div>
 	    			</div>
 	    		</div>
@@ -237,7 +237,7 @@
 	    					<p>ПВХ-окна любой сложности.</p>
 	    					<p><strong>Удорожание всего от 20%</strong></p>
 	    					<p class="services-image_mobile visible-xs-block"><a href="images/services/original/custom/1.jpg" data-fancybox-group="fancybox-thumb-4" class="fancybox-thumb"><span>Смотреть работы</span></a></p>
-	    					<div class="service-button"><a href="#application" data-subject="Окна с уникальным дизайном" class="btn btn-success btn-start-success btn-sm fancyboxModal">Вызвать замерщика</a></div>
+	    					<div class="service-button"><a href="#application" data-subject="Окна с уникальным дизайном"  data-id="service-modal"  class="btn btn-success btn-start btn-sm fancyboxModal">Вызвать замерщика</a></div>
 	    				</div>
 	    			</div>
 	    		</div>
@@ -289,7 +289,7 @@
     								<div class="col-sm-12">
     									<div class="order-form-button">
     									    <input type="hidden" name="page" value="Окна">
-    										<button type="submit" class="btn btn-warning btn-submit btn-block feedback">Получить скидку!</button>
+    										<button type="submit" data-id="responseMessage"  class="btn btn-warning btn-submit btn-start btn-block feedback">Получить скидку!</button>
     									</div>
     								</div>
     							</div>
@@ -422,19 +422,19 @@
 	    		<div class="col-sm-4">
 	    			<a href="images/documents/original/document4.jpg" class="certificate-document" data-fancybox-group="gallery-documents">
 	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
-	    				<div class="document-overlay"></div>
+	    				<div data-id="certificate" class="document-overlay btn-start"></div>
 	    			</a>
 	    		</div>
 	    		<div class="col-sm-4">
 	    			<a href="images/documents/original/document4.jpg" class="certificate-document" data-fancybox-group="gallery-documents">
 	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
-	    				<div class="document-overlay"></div>
+	    				<div data-id="certificate" class="document-overlay btn-start"></div>
 	    			</a>
 	    		</div>
 	    		<div class="col-sm-4">
 	    			<a href="images/documents/original/document4.jpg" class="certificate-document" data-fancybox-group="gallery-documents">
 	    				<img src="images/documents/document4.jpg" class="img-responsive" alt="">
-	    				<div class="document-overlay"></div>
+	    				<div data-id="certificate" class="document-overlay btn-start"></div>
 	    			</a>
 	    		</div>
     		</div>
@@ -477,7 +477,7 @@
     								<div class="col-sm-12">
     									<div class="order-form-button">
     									    <input type="hidden" name="page" value="Окна">
-    										<button type="submit" class="btn btn-warning btn-submit btn-block feedback">Получить скидку</button>
+    										<button type="submit" data-id="responseMessage"  class="btn btn-warning btn-submit btn-start btn-block feedback">Получить скидку</button>
     									</div>
     								</div>
     							</div>
@@ -586,7 +586,7 @@
                     <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
-                    <div class="text-center"><button type="submit" class="btn btn-warning btn-submit  feedback">Свяжитесь со мной!</button></div>
+                    <div class="text-center"><button type="submit" data-id="responseMessage"  class="btn btn-warning btn-submit btn-start  feedback">Свяжитесь со мной!</button></div>
                 </div>
                 <input type="hidden" name="page" value="Окна">
             </form>
@@ -609,12 +609,12 @@
                     <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
-                    <div class="text-center"><button type="submit" class="btn btn-success btn-submit feedback">Принять участие!</button></div>
+                    <div class="text-center"><button type="submit" data-id="responseMessage"  class="btn btn-success btn-submit  btn-start feedback">Принять участие!</button></div>
                 </div>
                 <input type="hidden" name="page" value="Окна">
             </form>
             <span class="help-block">Гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.</span>
-			<span title="Close" class="header-modal__close">x</span>
+			<span title="Close" class="header-modal__close btn-close">x</span>
         </div>
     </div>
     
@@ -633,7 +633,7 @@
                     <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
-                    <div class="text-center"><button type="submit" class="btn btn-success btn-submit feedback">Вызвать замерщика!</button></div>
+                    <div class="text-center"><button type="submit" data-id="responseMessage"  class="btn btn-success btn-submit btn-start feedback">Вызвать замерщика!</button></div>
                 </div>
                 <input type="hidden" name="page" value="Окна">
                 <input type="hidden" name="subject">
@@ -657,7 +657,7 @@
 
 	<div class="overlay overlay-close"></div>
 
-	<div class="header-modal hide header-modal--opened">
+	<div id="header-modal" class="header-modal hide modal-all">
 		<div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
 			<div class="fancybox-outer">
 				<div class="fancybox-inner" style="overflow: hidden; width: 580px; height: 495px;">
@@ -675,15 +675,15 @@
                     <input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
                 </div>
                 <div class="form-action">
-                    <div class="text-center"><button type="submit" class="btn btn-warning btn-submit feedback">Свяжитесь со мной!</button></div>
+                    <div class="text-center"><button type="submit" data-id="responseMessage"  class="btn btn-warning btn-submit btn-start feedback">Свяжитесь со мной!</button></div>
                 </div>
                 <input type="hidden" name="page" value="Окна">
             </form>
             <span class="help-block">Гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.</span>
         </div>
-    </div></div></div><span title="Close" class="header-modal__close">x</span></div></div>
+    </div></div></div><span title="Close" class="header-modal__close btn-close">x</span></div></div>
 
-	<div class="services-modal hide services-modal--opened">
+	<div id="service-modal" class="services-modal hide modal-all">
 			<div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
 				<div class="fancybox-outer">
 					<div class="fancybox-inner" style="overflow: hidden; width: 580px; height: 495px;">
@@ -701,7 +701,7 @@
 						<input type="text" name="phone" class="form-control required" placeholder="Контактный телефон*" data-mask="+7 (999) 999-99-99">
 					</div>
 					<div class="form-action">
-						<div class="text-center"><button type="submit" class="btn btn-success btn-submit feedback">Вызвать замерщика!</button></div>
+						<div class="text-center"><button data-id="responseMessage" type="submit" class="btn btn-success btn-start btn-submit feedback">Вызвать замерщика!</button></div>
 					</div>
 					<input type="hidden" name="page" value="Окна">
 					<input type="hidden" name="subject" value="Стандартные ПВХ-окна">
@@ -709,10 +709,10 @@
 				<span class="help-block">Гарантируем 100% конфиденциальность. Ваша информация не будет распространяться.</span>
 			</div>
 		</div></div></div>
-		<span title="Close" class="services-modal__close">x</span></div>
+		<span title="Close" class="btn-close services-modal__close">x</span></div>
 	</div>
 
-	<div id="certificate" class="modal-certificate overlay overlay-close"></div>
+	<div id="certificate" class="hide modal-all modal-certificate  modal-certificate__container"></div>
 
 	<div class="smooth-scroll hide">
 		<img class="smooth-scroll__img" src="./images/prev_arrow.png" alt="smooth">

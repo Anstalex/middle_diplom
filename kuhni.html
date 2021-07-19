@@ -117,11 +117,9 @@
                     </div>
                     <div class="col-sm-12 col-lg-6">
                         <div class="button">
-                            <a
-                                    href="#callback"
-                                    class="btn btn-warning btn-start btn-block fancyboxModal"
-                            ><i class="phone-icon"></i> Заказать звонок!</a
-                            >
+                            <a href="#callback" data-id="header-modal"
+                               class="btn btn-warning btn-start btn-block fancyboxModal">
+                                <i class="phone-icon"></i> Заказать звонок!</a>
                         </div>
                     </div>
                 </div>
@@ -198,7 +196,7 @@
                         <span class="text-normal">скидки до 40%</span> для Вас!
                     </div>
                     <div class="utp-button">
-                        <a href="#order" class="btn btn-success btn-open-modal btn-lg fancyboxModal"
+                        <a href="#order" data-id="order" class="btn btn-success btn-start btn-lg fancyboxModal"
                         >Узнать свою скидку</a>
                     </div>
                 </div>
@@ -343,12 +341,7 @@
                             >
                         </p>
                         <div class="service-button">
-                            <a
-                                    href="#application"
-                                    data-subject="Стандартные кухни"
-                                    class="btn btn-success btn-start-success btn-sm fancyboxModal"
-                            >Вызвать замерщика</a
-                            >
+                            <a href="#application" data-subject="Стандартные кухни" data-id="service-modal" class="btn btn-success btn-start btn-sm fancyboxModal">Вызвать замерщика</a>
                         </div>
                     </div>
                 </div>
@@ -471,7 +464,8 @@
                             <a
                                     href="#application"
                                     data-subject="Стандартные шкафы-купе"
-                                    class="btn btn-success btn-start-success btn-sm fancyboxModal"
+                                    data-id="service-modal"
+                                    class="btn btn-success btn-start btn-sm fancyboxModal"
                             >Вызвать замерщика</a
                             >
                         </div>
@@ -530,7 +524,8 @@
                             <a
                                     href="#application"
                                     data-subject="Элитные кухни"
-                                    class="btn btn-success btn-start-success btn-sm fancyboxModal"
+                                    data-id="service-modal"
+                                    class="btn btn-success btn-start btn-sm fancyboxModal"
                             >Вызвать замерщика</a>
                         </div>
                     </div>
@@ -576,7 +571,8 @@
                             <a
                                     href="#application"
                                     data-subject="Элитные шкафы-купе"
-                                    class="btn btn-success btn-start-success btn-sm fancyboxModal"
+                                    data-id="service-modal"
+                                    class="btn btn-success btn-start btn-sm fancyboxModal"
                             >Вызвать замерщика</a>
                         </div>
                     </div>
@@ -651,7 +647,8 @@
                                         />
                                         <button
                                                 type="submit"
-                                                class="btn btn-warning btn-submit btn-block feedback"
+                                                data-id="responseMessage"
+                                                class="btn btn-warning btn-submit btn-start btn-block feedback"
                                         >
                                             Получить скидку!
                                         </button>
@@ -859,21 +856,21 @@
                 <a href="images/documents/original/document4.jpg" class="certificate-document"
                    data-fancybox-group="gallery-documents">
                     <img src="images/documents/document4.jpg" class="img-responsive" alt="">
-                    <div class="document-overlay"></div>
+                    <div data-id="certificate"  class="document-overlay btn-start"></div>
                 </a>
             </div>
             <div class="col-sm-4">
                 <a href="images/documents/original/document4.jpg" class="certificate-document"
                    data-fancybox-group="gallery-documents">
                     <img src="images/documents/document4.jpg" class="img-responsive" alt="">
-                    <div class="document-overlay"></div>
+                    <div data-id="certificate"  class="document-overlay btn-start"></div>
                 </a>
             </div>
             <div class="col-sm-4">
                 <a href="images/documents/original/document4.jpg" class="certificate-document"
                    data-fancybox-group="gallery-documents">
                     <img src="images/documents/document4.jpg" class="img-responsive" alt="">
-                    <div class="document-overlay"></div>
+                    <div data-id="certificate"  class="document-overlay btn-start"></div>
                 </a>
             </div>
         </div>
@@ -936,7 +933,8 @@
                                         />
                                         <button
                                                 type="submit"
-                                                class="btn btn-warning btn-submit btn-block feedback"
+                                                data-id="responseMessage"
+                                                class="btn btn-warning btn-submit btn-start btn-block feedback"
                                         >
                                             Получить скидку
                                         </button>
@@ -1099,7 +1097,7 @@
             </div>
             <div class="form-action">
                 <div class="text-center">
-                    <button type="submit" class="btn btn-warning btn-submit feedback">
+                    <button type="submit" data-id="responseMessage"  class="btn btn-warning btn-submit btn-start feedback">
                         Свяжитесь со мной!
                     </button>
                 </div>
@@ -1147,7 +1145,7 @@
             </div>
             <div class="form-action">
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success btn-submit feedback">
+                    <button type="submit" data-id="responseMessage"  class="btn btn-success btn-submit btn-start feedback">
                         Принять участие!
                     </button>
                 </div>
@@ -1157,7 +1155,7 @@
         <span class="help-block"
         >Гарантируем 100% конфиденциальность. Ваша информация не будет
           распространяться.</span>
-        <span title="Close" class="header-modal__close">x</span>
+        <span title="Close" class="header-modal__close btn-close">x</span>
 
     </div>
 </div>
@@ -1193,7 +1191,7 @@
             </div>
             <div class="form-action">
                 <div class="text-center">
-                    <button type="submit" class="btn btn-success btn-submit feedback">
+                    <button type="submit" data-id="responseMessage"  class="btn btn-success btn-submit btn-start feedback">
                         Вызвать замерщика!
                     </button>
                 </div>
@@ -1222,7 +1220,7 @@
 
 <div class="overlay overlay-close"></div>
 
-<div class="header-modal hide header-modal--opened">
+<div id="header-modal" class="header-modal  modal-all hide ">
     <div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
         <div class="fancybox-outer">
             <div class="fancybox-inner" style="overflow: hidden; width: 580px; height: 495px;">
@@ -1244,7 +1242,9 @@
                             </div>
                             <div class="form-action">
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-warning btn-submit  feedback">Свяжитесь со мной!</button>
+                                    <button type="submit" data-id="responseMessage"  class="btn btn-warning btn-submit btn-start feedback">Свяжитесь со
+                                        мной!
+                                    </button>
                                 </div>
                             </div>
                             <input type="hidden" name="page" value="Окна">
@@ -1254,10 +1254,10 @@
                 </div>
             </div>
         </div>
-        <span title="Close" class="header-modal__close">x</span></div>
+        <span title="Close" class="header-modal__close btn-close">x</span></div>
 </div>
 
-<div class="services-modal hide services-modal--opened">
+<div id="service-modal" class="services-modal modal-all hide ">
     <div class="fancybox-skin" style="padding: 0px; width: auto; height: auto;">
         <div class="fancybox-outer">
             <div class="fancybox-inner" style="overflow: hidden; width: 580px; height: 495px;">
@@ -1279,7 +1279,7 @@
                             </div>
                             <div class="form-action">
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success btn-submit feedback">Вызвать
+                                    <button type="submit" data-id="responseMessage"  class="btn btn-success btn-submit btn-start feedback">Вызвать
                                         замерщика!
                                     </button>
                                 </div>
@@ -1292,10 +1292,11 @@
                 </div>
             </div>
         </div>
-        <span title="Close" class="services-modal__close">x</span></div>
+        <span title="Close" class="services-modal__close btn-close">x</span></div>
 </div>
 
-<div id="certificate2" class="modal-certificate overlay overlay-close"></div>
+<div id="certificate" class="hide modal-all modal-certificate  modal-certificate__container"></div>
+
 
 
 <div class="smooth-scroll hide">

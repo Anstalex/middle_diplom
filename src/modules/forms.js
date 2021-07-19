@@ -6,8 +6,8 @@ const forms = () => {
     const allInput = document.querySelectorAll('input');
     const btnSubmit = document.querySelectorAll('.btn-submit');
     const overlay = document.querySelector('.overlay');
-    const headerModal = document.querySelector('.header-modal');
-    const serviceModal = document.querySelector('.services-modal--opened');
+    const headerModal = document.getElementById('header-modal');
+    const serviceModal = document.getElementById('service-modal');
     const message = document.getElementById('responseMessage');
     let formInputs;
 
@@ -16,7 +16,6 @@ const forms = () => {
             callback();
         }
     };
-
 
     const sendForm = form => {
         const errorMessage = 'Что-то пошло не так';
@@ -67,10 +66,6 @@ const forms = () => {
                 }).catch(error => {
                     statusMessages.textContent = errorMessage;
                     console.error(error);
-                    setTimeout(() => {
-                        overlay.classList.add('overlay-close');
-
-                    }, 1000);
                 });
 
             const iterate = () => {
@@ -80,7 +75,6 @@ const forms = () => {
                 }
             };
             iterate();
-            //});
 
         };
         renderData(form);
@@ -167,10 +161,20 @@ const forms = () => {
                 isValidTest(inputs, () => {
                     sendForm(form);
                     message.classList.remove('hide');
-                    overlay.classList.add('overlay-close');
+                    overlay.classList.remove('overlay-close');
                     inputs.forEach(item => {
                         item.value = '';
                     });
+                    // handler(document, 'click', e => {
+                    //     const target = e.target;
+                    //     if (!target.closest('#responseMessage') &&
+                    //         (!target.closest('.btn-submit')) || (target.matches('.btn-close'))) {
+                    //         message.classList.add('hide');
+                    //         overlay.classList.add('overlay-close');
+                    //
+                    //     }
+                    // });
+
 
                 });
 
