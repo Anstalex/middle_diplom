@@ -33,9 +33,15 @@ const toggleModal = () => {
                 inputs = modal.querySelectorAll('input.form-control');
                 openPopup(target);
             } else {
-                console.log(modal, 1312321);
                 inputs = modal?.querySelectorAll('input.form-control') ?? [];
-                if (inputs.length && [...inputs].every(item => item.value !== '')) {
+                if (inputs.length === 0) {
+                    inputs = target.parentNode.parentNode.parentNode.parentNode.parentNode.querySelectorAll('input.form-control');
+                    if ([...inputs].every(item => item.value !== '')) {
+                        modal = document.getElementById(`${target.dataset.id}`);
+                        openPopup(target);
+                    }
+
+                } else if ([...inputs].every(item => item.value !== '')) {
                     modal = document.getElementById(`${target.dataset.id}`);
                     openPopup(target);
                 }
